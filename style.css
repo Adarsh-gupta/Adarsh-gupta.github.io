@@ -1,100 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    font-family:  Helvetica, sans-serif;
+    font-weight: normal;
+    list-style-type: none;
 }
 html,body{
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
-.back{
-    
-    width: 100%;
+#container{
     height: 100%;
-    background: linear-gradient(to right bottom,#3498db,#9b59b6);
-    
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    overflow: hidden;
+}
+#menu{
+    height: 100%;
+    width: 10%;
+    background-color: rgb(41, 41, 41);
+}
+.dev{
+    height: 16.66%;
+    width: 100%;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 30.5%;
+    font-size: 40px;
+    font-family: 'Ubuntu', sans-serif;
+}
+#mid{
+    height: 100%;
+    width: 40%;
+    position: relative;
+    padding: 20px;
+}
+#mid h1{
+    font-weight: 100;
+    font-size: 40px;
+    color: rgb(70, 69, 69);
+}#stock{
+    color: green;
+}
+a{
+    text-decoration: none;
+}
+#code{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 7%;
+}
+#price {
+    margin-top: 3px;
+    color: tomato
+}
+#price1{
+    text-decoration: line-through;
+}
+#productHighlights{
+    line-height: 22px;
+}
+#mid li,p{
+    font-size: 17px;
+    color: rgb(58, 58, 58);
+}
+#innerMid{
+    height: 10%;
+    width: 60%;
+    background-color:rgb(255, 135, 0);
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+    display: flex;
 
 }
-.card{
+#rightMid{
+    height: 100%;
+    width: 75%;
+    position: relative;
+}
+#rightMid h3{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    border-radius: 10px;
-    height: 500px;
-    width: 330px;
-    background: linear-gradient(to right bottom,#e74c3c,#f1c40f);
+    font-weight: normal;
+    font-family:  Helvetica, sans-serif;
+    color: white;
+}
+#leftMid{
+    height: 100%;
+    width: 25%;
+    background-color: rgb(17, 17, 17);
+    position: relative;
+}
+#leftMid img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#pic{
+    height: 100%;
+    width: 45%;
+    background-image: url("mypic.JPG");
+    background-size: cover;
+    background-position: -290px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+#end{
+    height: 100%;
+    width: 5%;
+    background-color:white;
+    
+}
+#end ul{
+    height: 91%;
+    width: 100%;
+    list-style-type: none;
+    padding: 15px 0;
+}
+
+#end ul{
     display: flex;
     flex-direction: column;
-    border:4px solid #0C2461;
-    transition: all ease-in-out .2s;
+    justify-content: space-between;
+    align-items: center;
 }
-.img{
-    margin-top: 50px; 
-    margin-left:85px;  
-    width: 150px;
-    height: 150px;
-    background-image: url('img.jpg');
-    border-radius: 50%;
-    background-size: cover;
-    
-
+#social{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.button1{
-    background-color: #353767;
-    text-align: center;
-    color: #E288DA;
-    height: 30px;
-    width: auto;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
-    text-decoration: none;
+ul li p{
+    transform: rotate(90deg);
+}
+#endDiv{
+    height: 9%;
+    width: 100%;
+    background-color: #331E13;
 }
 
-#name{
-    font-family:"Trebuchet MS", Helvetica, sans-serif;
-    margin-top: 20px;
-    font-size: 20px;
-    letter-spacing: 8px;
-    text-align: center;
-}
-#para{
-    margin:10px;
-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-font-size: 15px;
-}
-#para a{
-    text-decoration: none;
-    
-}
-#para a:link {
-    color:black;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 18px;
-}
-#p2{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 22px;
-    text-align: center;
-    margin-top: 10px;
-    letter-spacing: 1px;
-}
-
-@media(max-width:380px){
-
-    .card{
-        transform: translate(-50%,-50%) scale(.8) ;
-        
-    }
-
-}
-@media(max-width:310px){
-
-    .card{
-        transform: translate(-50%,-50%) scale(.6) ;
-        
-    }
-
-}
