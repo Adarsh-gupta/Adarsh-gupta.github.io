@@ -1,269 +1,104 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500');
+:root{
+    --bg-color: white;
+    --primary-color: #19293A;
+}
 *{
-    padding: 0;
     margin: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-family:  Helvetica, sans-serif;
-    font-weight: normal;
-    list-style-type: none;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: var(--primary-color);
 }
+
 html,body{
-    height: 100%;
     width: 100%;
+    height: 100%;
 }
-#container{
-    height: 100%;
+.container{
+    height: 100vh;
     width: 100%;
-    background-color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    background-color: var(--bg-color);
+    transition: .35s ease-in-out all;
+}
+nav{
+    height: 8%;
+    width: 100%;
+    padding: 0 10%;
     display: flex;
+    justify-content: flex-end;
 }
-#menu{
-    height: 100%;
-    width: 10%;
-    background-color: rgb(41, 41, 41);
+.name{
+    margin-right: 10px;
 }
-.dev{
-    height: 16.66%;
-    width: 100%;
-    color: white;
-    font-weight: 100;
-    text-align: center;
-    padding-top: 30.5%;
-    font-size: 40px;
-    font-family: 'Ubuntu', sans-serif;
+
+.flex-norm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#mid{
-    height: 100%;
+#btn-toggle{
+    width: 50px;
+    height: 20px;
+    background-color: #797979;
+    border-radius: 15px;
+
+}
+
+#btn-toggle #circle{
+    height: 20px;
+    width: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transform: scale(1.2);
+    transition: .35s cubic-bezier(.33,.69,.33,.67) all;
+    
+}
+
+.clicked#circle{
+    margin-left: 30px;
+}
+
+.content{
+    height: 70%;
     width: 40%;
-    position: relative;
-    padding: 20px;
-}
-#mid h1{
-    font-weight: 100;
-    font-size: 40px;
-    color: rgb(70, 69, 69);
-}
-
-#mid p:nth-child(2){
-    margin-bottom: 20px;
-}
-
-#stock{
-    color: green;
-}
-a{
-    text-decoration: none;
-}
-#code{
-    font-size: 30px;
-    text-align: center;
-    margin-top: 7%;
-}
-#price {
-    margin-top: 3px;
-    color: tomato
-}
-#price1{
-    text-decoration: line-through;
-}
-#productHighlights{
-    line-height: 22px;
-}
-#mid li,p{
-    font-size: 17px;
-    color: rgb(58, 58, 58);
-}
-#innerMid{
-    height: 6%;
-    width: 42%;
-    background-color:rgb(255, 135, 0);
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    -webkit-transform: translate(-50%,0%);
-        -ms-transform: translate(-50%,0%);
-            transform: translate(-50%,0%);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
-}
-#rightMid{
-    height: 100%;
-    width: 75%;
-    position: relative;
-}
-#rightMid h3{
-    text-align: center;
-    line-height: 60px;
-    font-weight: normal;
-    font-family:  Helvetica, sans-serif;
-    color: white;
-    font-size: 16px;
-}
-#leftMid{
-    height: 100%;
-    width: 25%;
-    background-color: rgb(17, 17, 17);
-    position: relative;
-}
-#leftMid img{
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
-#pic{
-    height: 100%;
-    width: 45%;
-    background-image: url("mypic.JPG");
-    background-size: cover;
-    background-position: -290px;
-    position: relative;
-    background-repeat: no-repeat;
+h1{
+    margin-top: -4%;
+    font-size: 40px;
 }
+p{
+    font-size: 15px;
+}
+.content p a{
+    text-decoration: none;
+    font-weight: 500;
+}
+#last{
+    margin-top: 7px;
+}
+button{
+    outline: none;
+    border: none;
+    text-decoration: none;
+    margin-top: 30px;
+    padding: 12px 50px;
+    border-radius: 20px;
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--bg-color);
+    transition: .3s ease-out all;
+}
+button:hover{
+    transform: scale(1.05);
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    border-color: var(--primary-color);
 
-#end{
-    height: 100%;
-    width: 5%;
-    background-color:white;
-    
-}
-#end ul{
-    height: 91%;
-    width: 100%;
-    list-style-type: none;
-    padding: 15px 0;
-}
-
-#end ul{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-#social{
-    height: 120px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-}
-#end ul li{
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
-}
-
-
-
-@media(max-width: 1260px){
-    #mid>h1{
-        font-size: 32px;
-        font-weight: normal;
-    }
-    #mid p:nth-child(2){
-        margin-bottom: 20px;
-    }
-}
-
-@media(max-width: 522px){
-    #container{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-    }   
-    #menu{
-        width: 100%;
-        height: 70px;
-        background-color: rgb(41, 41, 41);
-    }
-    .dev{
-        float: left;
-        width: 40px;
-        height: initial;
-        color: white;
-        font-weight: 100;
-        padding-top: initial;
-        font-size: 40px;
-        margin-left: 20px;
-        font-family: 'Ubuntu', sans-serif;
-        padding: 10px 0;
-    }
-    .dev:nth-child(1){
-        margin-left: 20px;
-    }
-
-    #mid{
-        width: 100%;
-        min-height: 100%;
-        margin-bottom: 5px;
-    }
-    #code{
-        font-size: 25px;
-    }
-    #innerMid{
-        height: 6%;
-        width: 72%;
-        background-color:rgb(255, 135, 0);
-        position: absolute;
-        bottom: 0%;
-        left: 50%;
-        -webkit-transform: translate(-50%,0%);
-            -ms-transform: translate(-50%,0%);
-                transform: translate(-50%,0%);
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        overflow: hidden;
-    }
-    #end{
-        width: 100%;
-        height: 7%;
-    }
-    #end ul li{
-        -webkit-transform: rotate(0);
-            -ms-transform: rotate(0);
-                transform: rotate(0);
-    }    
-    #end ul{
-        width: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-    }
-}
-
-@media(max-width:390px){
-    .dev{
-        font-size: 20px;
-        margin-left: 10px;
-    }
 }
